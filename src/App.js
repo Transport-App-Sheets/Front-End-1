@@ -4,6 +4,7 @@ import Login from './components/Login';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Childmap from './components/Childmap';
+import Childshow from './components/Childshow';
 
 function App() {
   const location = useLocation();
@@ -12,16 +13,18 @@ function App() {
   // Set the background image based on the current route
   switch (location.pathname) {
     case '/':
-      bgImage = require('./components/bg.jpg');
+      bgImage = require('./components/cg.jpg');
       break;
     case '/addchild':
-      bgImage = require('./components/gg.jpg');
+      bgImage = require('./components/bg.jpg');
       break;
     case '/mapchild':
+      bgImage = require('./components/cg.jpg');
+      break;
+      case '/showchild':
       bgImage = require('./components/bg.jpg');
       break;
-    default:
-      bgImage = require('./components/bg.jpg');
+   
   }
 
   return (
@@ -46,6 +49,14 @@ function App() {
           <>
             <Navbar />
             <Childmap />
+          </>
+        </Route>
+        <Route path='/showchild' exact>
+          <>
+            <Navbar />  <div style={{display: " flex"}}>
+            <Childshow childname='sami' childaddress='Marrakesh' schoolname='Emsi gueliz' driver='IRBus 41'/>
+            <Childshow childname='wassim' childaddress='Marrakesh' schoolname='Emsi centrer' driver='IRBus 40'/>
+            </div>
           </>
         </Route>
       </Switch>

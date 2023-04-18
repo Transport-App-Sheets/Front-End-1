@@ -68,7 +68,7 @@ export default function ResponsiveAppBar() {
            value={lastname}
            style={{ margin: '10px 10px 20px 10px' }}
            onChange={(e)=>setLastname(e.target.value)}
-           />  
+           /> 
 <div>
            <TextField id="outlined-basic" label="First Name" variant="filled"
           value={firstname}
@@ -83,13 +83,14 @@ export default function ResponsiveAppBar() {
            onChange={(e)=>setSchoolname(e.target.value)}
           
            /> </div>
+           <div>
            
 <TextField id="outlined-basic" label="Age" variant="filled"
           value={age}
            style={{ margin: '10px 10px 20px 10px',width:'10vw' }}
            onChange={(e)=>setAge(e.target.value)}
           
-           /> 
+           />   
 
 <TextField id="outlined-basic" label="Home Adress" variant="filled" 
                     
@@ -102,11 +103,11 @@ export default function ResponsiveAppBar() {
            <div><br></br></div>
          
 
-          
+          </div>
   
   </Paper>
   </div>
  
-    </Box>  </div>
+    </Box>  </div> 
   );
 }
