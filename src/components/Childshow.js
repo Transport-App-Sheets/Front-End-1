@@ -9,7 +9,7 @@ import styles from './childcard.css';
 export default function Childshow(props) {
 
   const { childname,childaddress,schoolname,driver }=props
-    return (
+    return(
       <div style={{padding:"10px",opacity:"0.9",background:"black",color:"green",width:"25vw",height:'10vw',borderRadius: '10px',margin:'50px 0px 0px 30px' }}>
        <div class="container" style={styles}>
  <div class="wrapper">
